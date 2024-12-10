@@ -11,7 +11,7 @@ function Message() {
 
     const fetchHello = async () => {
         try {
-            const response = await fetch('/hello/hello');
+            const response = await fetch('https://recuperacao.onrender.com/hello/hello');
             const data = await response.text();
             setEchoMessage(data);
         } catch (error) {
@@ -22,7 +22,7 @@ function Message() {
 
     const sendEcho = async () => {
         try {
-            const response = await fetch('/hello/echo', {
+            const response = await fetch('https://recuperacao.onrender.com/hello/echo', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
